@@ -7,10 +7,7 @@ class BaseStrings(IBaseString):
         self.given_string = string
 
     def replace(self, old: str, new: str, count: int = -1) -> str:
-        """
-        Replaces occurrences of 'old' with 'new' from scratch.
-        If count is specified, only replaces that many occurrences.
-        """
+        
         # CASE_ZERO: Edge case protection against an empty 'old' and new string (prevents infinite loop)
         if old == "":
             raise ValueError("replace() argument, 'old' cannot be an empty string")
@@ -42,3 +39,13 @@ class BaseStrings(IBaseString):
                 start += 1
 
         return new_str
+
+    def find(self, sub:str , start:int = 0 , end:int = -1 ):
+
+        # Case Zero: The Substrig not exists , The Provided String
+        if sub not in self.given_string:
+            return -1
+        # Case One: What if The argument Sub is Empty String
+        if len(sub) == 0:
+            raise ValueError("The Sub-String can not be Empty")
+

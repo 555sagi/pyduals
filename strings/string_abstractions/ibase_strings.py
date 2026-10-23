@@ -9,7 +9,6 @@ class IBaseString(ABC):
         """
         Replaces occurrences of a substring with another substring.
         
-        Parameters:
         - old (str): The target substring you want to find and replace.
         - new (str): The new string that will swap into the old substring's place.
         - count (int): Maximum replacements to perform. Defaults to -1 (replace all).
@@ -29,16 +28,15 @@ class IBaseString(ABC):
         #pass
 
     #@abstractmethod
-    #def find(self, sub: str, start: int = 0, end: int = -1) -> int: 
-        #"""
-        #Finds the lowest index where a substring is found. Returns -1 if not found.
+    def find(self, sub: str, start: int = 0, end: int = -1) -> int: 
+        """
+        Finds the lowest index where a substring is found. Returns -1 if not found.
         
-        #Parameters:
-        #- sub (str): The target substring to look for.
-        #- start (int): Starting index slice boundary. Defaults to 0.
-        #- end (int): Ending index slice boundary. Defaults to -1.
-        #"""
-        #pass
+        - sub (str): The target substring to look for.
+        - start (int): Starting index slice boundary. Defaults to 0.
+        - end (int): Ending index slice boundary. Defaults to -1.
+        """
+        pass
 
     #@abstractmethod
     #def rfind(self, sub: str, start: int = 0, end: int = -1) -> int: 
